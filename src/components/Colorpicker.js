@@ -4,9 +4,9 @@ import React, { Component } from 'react'
 export class ColorPicker extends Component {
   // constructor(props)
   state = {
-    hue: 1,
-    saturation: 1,
-    lightness: 1
+    hue: 50,
+    saturation: 50,
+    lightness: 50
   }
 
   changeHue = event => {
@@ -42,12 +42,9 @@ export class ColorPicker extends Component {
     return (
       //make sliders
       <div>
-        <div>
-          <main className="all-sliders">
             <section
-              className="slider-one"
-              style={{ backgroundColor: `hsl(360,100%,100%)` }}
-            >
+              style={{ backgroundColor: `hsl(${this.state.hue},${this.state.saturation}%,${this.state.lightness}%) }}`
+            />
               <input
                 type="range"
                 min="1"
@@ -56,41 +53,8 @@ export class ColorPicker extends Component {
                 value={this.state.value}
                 onChange={this.state.change}
               />
-            </section>
-            <section
-              className="slider-two"
-              style={{ backgroundColor: `hsl(360,100%,100%)` }}
-            >
-              <input
-                type="range"
-                min="1"
-                max="255"
-                step="1"
-                value={this.state.value}
-                onChange={this.state.change}
-              />
-            </section>
-            <section
-              className="slider-three"
-              style={{ backgroundColor: `hsl(360,100%,100%)` }}
-            >
-              <input
-                type="range"
-                min="1"
-                max="255"
-                step="1"
-                value={this.state.value}
-                onChange={this.state.change}
-              />
-            </section>
-          </main>
+        </section>
         </div>
-        <h2>Hue: {this.state.hue}</h2>
-        <h2>Saturation: {this.state.saturation}</h2>
-        <h2>Lightness: {this.state.lightness}</h2>
-      </div>
     )
-  }
-}
 
 export default ColorPicker
