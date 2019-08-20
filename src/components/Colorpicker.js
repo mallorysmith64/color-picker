@@ -40,16 +40,39 @@ export class ColorPicker extends Component {
 
   render() {
     return (
-      <div style={{ backgroundColor: `hsl(50,8%,20%)` }}>
-        <input
-          // id="hue-slider"
-          type="range"
-          min="1"
-          max="255"
-          step="1"
-          // value={this.state.value}
-          // onChange={this.state.change}
-        />
+      <div>
+        <main>
+          <section style={{ backgroundColor: `hsl(360,100%,100%)` }}>
+            <input
+              type="range"
+              min="1"
+              max="255"
+              step="1"
+              value={this.state.value}
+              onChange={this.state.change}
+            />
+          </section>
+          <section style={{ backgroundColor: `hsl(360,100%,100%)` }}>
+            <input
+              type="range"
+              min="1"
+              max="255"
+              step="1"
+              value={this.state.value}
+              onChange={this.state.change}
+            />
+          </section>
+          <section style={{ backgroundColor: `hsl(360,100%,100%)` }}>
+            <input
+              type="range"
+              min="1"
+              max="255"
+              step="1"
+              value={this.state.value}
+              onChange={this.state.change}
+            />
+          </section>
+        </main>
       </div>
     )
   }
