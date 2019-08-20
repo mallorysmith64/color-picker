@@ -7,7 +7,7 @@ class App extends Component {
     console.log('rendering')
     return (
       <section>
-        <h1>Color Picker</h1>
+        <h1>HSL Color Picker</h1>
         <ColorPicker />
       </section>
     )

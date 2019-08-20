@@ -9,5 +9,16 @@ html {
 body {
   margin: 0;
   min-height: 100%;
-  background-color: yellow;
+  background-color: purple;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+h1 {
+  font-size: 6em;
+}
+
+/* .all-sliders {
+
+} */

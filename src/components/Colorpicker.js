@@ -41,8 +41,11 @@ export class ColorPicker extends Component {
   render() {
     return (
       <div>
-        <main>
-          <section style={{ backgroundColor: `hsl(360,100%,100%)` }}>
+        <main className="all-sliders">
+          <section
+            className="slider-one"
+            style={{ backgroundColor: `hsl(360,100%,100%)` }}
+          >
             <input
               type="range"
               min="1"
@@ -52,7 +55,10 @@ export class ColorPicker extends Component {
               onChange={this.state.change}
             />
           </section>
-          <section style={{ backgroundColor: `hsl(360,100%,100%)` }}>
+          <section
+            className="slider-two"
+            style={{ backgroundColor: `hsl(360,100%,100%)` }}
+          >
             <input
               type="range"
               min="1"
@@ -62,7 +68,10 @@ export class ColorPicker extends Component {
               onChange={this.state.change}
             />
           </section>
-          <section style={{ backgroundColor: `hsl(360,100%,100%)` }}>
+          <section
+            className="slider-three"
+            style={{ backgroundColor: `hsl(360,100%,100%)` }}
+          >
             <input
               type="range"
               min="1"
