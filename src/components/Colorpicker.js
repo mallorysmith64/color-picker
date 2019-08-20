@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import Slider from './components/Slider'
+// import Slider from './components/Slider'
 
 export class ColorPicker extends Component {
-  // constructor(props) 
+  // constructor(props)
   state = {
     hue: 1,
     saturation: 1,
@@ -10,47 +10,49 @@ export class ColorPicker extends Component {
   }
 
   changeHue = event => {
-    console.log("changing hue")
-    let changeHue = event.target.value
-      this.setState({
-      hue: this.state.changeHue + 1
+    console.log('changing hue')
+    this.setState({
+      hue: event.target.value
     })
   }
 
   changeSaturation = event => {
-    console.log("changing saturation")
-    let changeSaturation = event.target.value
+    console.log('changing saturation')
     this.setState({
-      saturation: this.state.saturation + 1
-      // saturation: true
+      saturation: event.target.value
     })
   }
 
   changeLightness = event => {
-    console.log("changing lightness")
-    let changeLightness = event.target.value
+    console.log('changing lightness')
     this.setState({
-      lightness: this.state.lightness + 1
-      // lightness: true
+      lightness: event.target.value
     })
   }
-}
 
-// saveUserInput = event => {
-//   console.log(event.target.value)
-//   //target user input
-//   this.setState({
-//     userInput: event.target.value
-// })
-// }
+  // saveUserInput = event => {
+  //   console.log(event.target.value)
+  //   //target user input
+  //   this.setState({
+  //     userInput: event.target.value
+  // })
+  // }
 
-render() {
-  return (
-    <div>
-      <section className="hue-selector">
-      </section>
-    </div>
-  )
+  render() {
+    return (
+      <div style={{ backgroundColor: `hsl(50,8%,20%)` }}>
+        <input
+          // id="hue-slider"
+          type="range"
+          min="1"
+          max="255"
+          step="1"
+          // value={this.state.value}
+          // onChange={this.state.change}
+        />
+      </div>
+    )
+  }
 }
 
 export default ColorPicker
