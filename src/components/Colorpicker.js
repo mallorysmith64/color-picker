@@ -40,7 +40,7 @@ export class ColorPicker extends Component {
 
   render() {
     return (
-      //physical sliders
+      //make sliders
       <div>
         <div>
           <main className="all-sliders">
@@ -85,9 +85,9 @@ export class ColorPicker extends Component {
             </section>
           </main>
         </div>
-        <h2>Hue</h2>
-        <h2>Saturation</h2>
-        <h2>Lightness</h2>
+        <h2>Hue: {this.state.hue}</h2>
+        <h2>Saturation: {this.state.saturation}</h2>
+        <h2>Lightness: {this.state.lightness}</h2>
       </div>
     )
   }
