@@ -40,48 +40,54 @@ export class ColorPicker extends Component {
 
   render() {
     return (
+      //physical sliders
       <div>
-        <main className="all-sliders">
-          <section
-            className="slider-one"
-            style={{ backgroundColor: `hsl(360,100%,100%)` }}
-          >
-            <input
-              type="range"
-              min="1"
-              max="255"
-              step="1"
-              value={this.state.value}
-              onChange={this.state.change}
-            />
-          </section>
-          <section
-            className="slider-two"
-            style={{ backgroundColor: `hsl(360,100%,100%)` }}
-          >
-            <input
-              type="range"
-              min="1"
-              max="255"
-              step="1"
-              value={this.state.value}
-              onChange={this.state.change}
-            />
-          </section>
-          <section
-            className="slider-three"
-            style={{ backgroundColor: `hsl(360,100%,100%)` }}
-          >
-            <input
-              type="range"
-              min="1"
-              max="255"
-              step="1"
-              value={this.state.value}
-              onChange={this.state.change}
-            />
-          </section>
-        </main>
+        <div>
+          <main className="all-sliders">
+            <section
+              className="slider-one"
+              style={{ backgroundColor: `hsl(360,100%,100%)` }}
+            >
+              <input
+                type="range"
+                min="1"
+                max="255"
+                step="1"
+                value={this.state.value}
+                onChange={this.state.change}
+              />
+            </section>
+            <section
+              className="slider-two"
+              style={{ backgroundColor: `hsl(360,100%,100%)` }}
+            >
+              <input
+                type="range"
+                min="1"
+                max="255"
+                step="1"
+                value={this.state.value}
+                onChange={this.state.change}
+              />
+            </section>
+            <section
+              className="slider-three"
+              style={{ backgroundColor: `hsl(360,100%,100%)` }}
+            >
+              <input
+                type="range"
+                min="1"
+                max="255"
+                step="1"
+                value={this.state.value}
+                onChange={this.state.change}
+              />
+            </section>
+          </main>
+        </div>
+        <h2>Hue</h2>
+        <h2>Saturation</h2>
+        <h2>Lightness</h2>
       </div>
     )
   }
