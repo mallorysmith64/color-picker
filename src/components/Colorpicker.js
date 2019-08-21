@@ -42,19 +42,24 @@ export class ColorPicker extends Component {
     return (
       //make sliders
       <div>
-            <section
-              style={{ backgroundColor: `hsl(${this.state.hue},${this.state.saturation}%,${this.state.lightness}%) }}`
-            />
-              <input
-                type="range"
-                min="1"
-                max="255"
-                step="1"
-                value={this.state.value}
-                onChange={this.state.change}
-              />
+        <section
+          style={{
+            backgroundColor: `hsl(${this.state.hue},${this.state.saturation}%,${
+              this.state.lightness
+            }%)`
+          }}
+        >
+          <input
+            type="range"
+            min="1"
+            max="255"
+            step="1"
+            value={this.state.value}
+            onChange={this.state.change}
+          />
         </section>
-        </div>
+      </div>
     )
-
+  }
+}
 export default ColorPicker
