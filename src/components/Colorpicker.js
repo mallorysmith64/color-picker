@@ -3,8 +3,8 @@ import React, { Component } from 'react'
 export class ColorPicker extends Component {
   state = {
     hue: Math.ceil(Math.random() * 360),
-    saturation: Math.ceil(Math.random() * 100),
-    lightness: Math.ceil(Math.random() * 100)
+    saturation: 50,
+    lightness: 50
   }
 
   changeHue = event => {
@@ -59,7 +59,7 @@ export class ColorPicker extends Component {
             type="range"
             min="0"
             max="100"
-            step="1"
+            step="2"
             value={this.state.value}
             onChange={this.changeLightness}
           />
