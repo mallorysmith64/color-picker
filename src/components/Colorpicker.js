@@ -52,10 +52,10 @@ export class ColorPicker extends Component {
           <input
             type="range"
             min="1"
-            max="255"
+            max="360"
             step="1"
             value={this.state.value}
-            onChange={this.state.change}
+            onChange={this.changeHue}
           />
         </section>
       </div>
