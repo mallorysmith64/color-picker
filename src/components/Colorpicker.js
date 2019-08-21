@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 export class ColorPicker extends Component {
   // constructor(props)
   state = {
-    hue: 50,
+    hue: 180,
     saturation: 50,
     lightness: 50
   }
@@ -57,6 +57,25 @@ export class ColorPicker extends Component {
             value={this.state.value}
             onChange={this.changeHue}
           />
+          <input
+            type="range"
+            min="1"
+            max="100"
+            step="1"
+            value={this.state.value}
+            onChange={this.changeSaturation}
+          />
+          <input
+            type="range"
+            min="1"
+            max="100"
+            step="1"
+            value={this.state.value}
+            onChange={this.changeLightness}
+          />
+          <h2>Hue: {this.state.hue}</h2>
+          <h2>Saturation: {this.state.saturation}</h2>
+          <h2>Lightness: {this.state.lightness}</h2>
         </section>
       </div>
     )
