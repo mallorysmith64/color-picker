@@ -19,10 +19,7 @@ h1 {
   font-size: 6em;
 }
 
-/* h2 {
-  
-} */
-
-/* .all-sliders {
-
-} */
+.background-btn {
+  width: 4em;
+  height: 4em;
+}

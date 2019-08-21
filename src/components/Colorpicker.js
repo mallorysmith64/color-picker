@@ -28,10 +28,24 @@ export class ColorPicker extends Component {
     })
   }
 
+  changeBackground = event => {
+    console.log('change background')
+    this.setState({
+      hue: Math.ceil(Math.random() * 360),
+      saturation: Math.ceil(Math.random() * 100),
+      lightness: Math.ceil(Math.random() * 100)
+    })
+  }
+
   render() {
     return (
       //make sliders
       <div>
+        <button
+          className="background-btn"
+          value={this.state.backgroundColor}
+          onClick={this.changeBackground}
+        />
         <section
           style={{
             backgroundColor: `hsl(${this.state.hue},${this.state.saturation}%,${
@@ -44,7 +58,7 @@ export class ColorPicker extends Component {
             min="0"
             max="360"
             step="2"
-            value={this.state.value}
+            value={this.state.hue}
             onChange={this.changeHue}
           />
           <input
@@ -52,7 +66,7 @@ export class ColorPicker extends Component {
             min="0"
             max="100"
             step="2"
-            value={this.state.value}
+            value={this.state.saturation}
             onChange={this.changeSaturation}
           />
           <input
@@ -60,7 +74,7 @@ export class ColorPicker extends Component {
             min="0"
             max="100"
             step="2"
-            value={this.state.value}
+            value={this.state.lightness}
             onChange={this.changeLightness}
           />
           <h2>Hue: {this.state.hue}</h2>
