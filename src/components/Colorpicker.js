@@ -1,12 +1,10 @@
 import React, { Component } from 'react'
-// import Slider from './components/Slider'
 
 export class ColorPicker extends Component {
-  // constructor(props)
   state = {
-    hue: 180,
-    saturation: 50,
-    lightness: 50
+    hue: Math.ceil(Math.random() * 360),
+    saturation: Math.ceil(Math.random() * 100),
+    lightness: Math.ceil(Math.random() * 100)
   }
 
   changeHue = event => {
@@ -30,14 +28,6 @@ export class ColorPicker extends Component {
     })
   }
 
-  // saveUserInput = event => {
-  //   console.log(event.target.value)
-  //   //target user input
-  //   this.setState({
-  //     userInput: event.target.value
-  // })
-  // }
-
   render() {
     return (
       //make sliders
@@ -51,23 +41,23 @@ export class ColorPicker extends Component {
         >
           <input
             type="range"
-            min="1"
+            min="0"
             max="360"
-            step="1"
+            step="2"
             value={this.state.value}
             onChange={this.changeHue}
           />
           <input
             type="range"
-            min="1"
+            min="0"
             max="100"
-            step="1"
+            step="2"
             value={this.state.value}
             onChange={this.changeSaturation}
           />
           <input
             type="range"
-            min="1"
+            min="0"
             max="100"
             step="1"
             value={this.state.value}
