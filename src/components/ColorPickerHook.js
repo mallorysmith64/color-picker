@@ -6,23 +6,21 @@ const ColorPickerHook = () => {
   const [lightness, setLightness] = useState(50)
 
   const changeBackground = () => {
-    setHue(Math.ceil(Math.random() * 360),
-    setSaturation(Math.ceil(Math.random() * 100),
-    setLightness(Math.ceil(Math.random()* 100)
-
+    setHue(Math.ceil(Math.random() * 360))
+    setSaturation(Math.ceil(Math.random() * 100))
+    setLightness(Math.ceil(Math.random() * 100))
+  }
   return (
     <>
-      <button
-        className="background-btn"
-        value={hue}
-        onClick={e => setHue(e.target.value)}
-      />
+      <div>
+        <button onClick={() => changeBackground()}>Click Me</button>
+      </div>
       <section
         style={{
           backgroundColor: `hsl(${hue},${saturation}%,${lightness}%)`
         }}
       >
-        {/* <h2>Hue: {hue}</h2> */}
+        <h2>Hue: {hue}</h2>
         <input
           type="range"
           min="0"
@@ -31,7 +29,7 @@ const ColorPickerHook = () => {
           value={hue}
           onChange={e => setHue(e.target.value)}
         />
-        {/* <h2>Lightness: {lightness}</h2> */}
+        <h2>Lightness: {lightness}</h2>
         <input
           type="range"
           min="0"
@@ -40,7 +38,7 @@ const ColorPickerHook = () => {
           value={lightness}
           onChange={e => setLightness(e.target.value)}
         />
-        {/* <h2>Saturation: {saturation}</h2> */}
+        <h2>Saturation: {saturation}</h2>
         <input
           type="range"
           min="0"
@@ -53,4 +51,5 @@ const ColorPickerHook = () => {
     </>
   )
 }
+
 export default ColorPickerHook
