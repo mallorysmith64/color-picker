@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import ColorPicker from './components/ColorPicker'
+import ColorPickerHooks from './components/ColorPickerHooks'
+// import ColorPicker from './components/ColorPicker'
 
 class App extends Component {
   render() {
@@ -7,7 +8,8 @@ class App extends Component {
     return (
       <section>
         <h1>HSL Color Picker</h1>
-        <ColorPicker />
+        <ColorPickerHooks />
+        {/* <ColorPicker/> */}
       </section>
     )
   }
