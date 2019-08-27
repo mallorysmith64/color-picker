@@ -5,19 +5,18 @@ const ColorPickerHook = () => {
   const [saturation, setSaturation] = useState(50)
   const [lightness, setLightness] = useState(50)
 
-  // function changeBackground = () => {
-  //   setHue(Math.ceil(Math.random() * 360),
-  //   setSaturation(Math.ceil(Math.random() * 100),
-  //   setLightness(Math.ceil(Math.random()* 100)
-  // }
+  const changeBackground = () => {
+    setHue(Math.ceil(Math.random() * 360),
+    setSaturation(Math.ceil(Math.random() * 100),
+    setLightness(Math.ceil(Math.random()* 100)
 
   return (
     <>
-      {/* <button
+      <button
         className="background-btn"
-        value={backgroundColor}
-        onClick={changeBackground}
-      /> */}
+        value={hue}
+        onClick={e => setHue(e.target.value)}
+      />
       <section
         style={{
           backgroundColor: `hsl(${hue},${saturation}%,${lightness}%)`
