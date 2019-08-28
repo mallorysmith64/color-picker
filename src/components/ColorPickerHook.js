@@ -5,15 +5,17 @@ const ColorPickerHook = () => {
   const [saturation, setSaturation] = useState(50)
   const [lightness, setLightness] = useState(50)
 
-  const changeBackground = () => {
+  const changeColor = () => {
     setHue(Math.ceil(Math.random() * 360))
     setSaturation(Math.ceil(Math.random() * 100))
     setLightness(Math.ceil(Math.random() * 100))
+    console.log('changeColor')
   }
+
   return (
     <>
       <div>
-        <button onClick={() => changeBackground()}>Click Me</button>
+        <button onClick={() => changeColor()}>Click Me</button>
       </div>
       <section
         style={{

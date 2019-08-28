@@ -4,7 +4,7 @@ import ColorPickerHook from './components/ColorPickerHook'
 
 class App extends Component {
   render() {
-    console.log('rendering')
+    console.log('rendering App.js')
     return (
       <section>
         <h1>HSL Color Picker</h1>
